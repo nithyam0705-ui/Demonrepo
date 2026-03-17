@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nithya M - Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {             
+            background-color: #fdf6f0;
+            color: #0f0f0f;
+        }
+
+        /* UNIVERSAL HEADER */
+        header {
+            width: 100%;
+            height: 150px;
+            background-color: #faf3eb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            position: absolute;
+            top: 15px;
+            left: 20px;
+        }
+
+        .logo img {
+            width: 110px; /* smaller logo */
+        }
+
+        .header-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #333;
+            text-align: center;
+            font-family: Cambria, serif;
+        }
+
+        /* MENU */
+        .menu {
+            position: fixed;
+            top: 160px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            padding: 15px 0;
+            background-color: #fdf6f0;
+            z-index: 999;
+        }
+
+        .menu a {
+            text-decoration: none;
+            padding: 6px 12px;
+            background: linear-gradient(45deg, #8e44ad, #5b2c6f);
+            color: white;
+            border-radius: 5px;
+            font-weight: 500;
+            font-size: 14px;
+            transition: 0.3s ease;
+        }
+
+        .menu a:hover {
+            background: linear-gradient(45deg, #5b2c6f, #8e44ad);
+        }
+
+        /* SECTION SPACING */
+        section {
+            padding-top: 240px;
+            padding-bottom: 40px;
+        }
+
+        /* Profile Section */
+        .profile-pic {
+            text-align: center;
+        }
+
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid #8e44ad;
+            box-shadow: 0 4px 15px rgba(142, 68, 173, 0.4);
+            object-fit: cover;
+        }
+
+        .intro-name, .intro-role {
+            overflow: hidden;                      
+            white-space: nowrap;
+            border-right: 3px solid;
+            margin: 10px auto;
+        }
+
+        @keyframes typingName { from {width: 0;} to {width: 20ch;} }
+        @keyframes typingRole { from {width: 0;} to {width: 30ch;} }
+        @keyframes typingBottom { from {width: 0;} to {width: 100%;} }
+        @keyframes blink { 50% {border-color: transparent;} }
+
+        /* SECTION BOX */
+        .box {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #faf3eb;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .title {
+            text-align: center;
+            font-size: 30px;
+            font-weight: 700;
+            color: #5b2c6f;
+            margin-bottom: 20px;
+        }
+
+        .text {
+            font-size: 18px;
+            line-height: 1.8;
+            font-weight: 500;
+            color: #333;
+        }
+
+        /* SKILLS */
+        .skill { margin-bottom: 20px; }
+        .skill-name { font-weight: 600; margin-bottom: 8px; color: #5b2c6f; }
+        .skill-bar { width: 100%; background-color: #ddd; border-radius:20px; height: 25px; overflow: hidden; }
+        .skill-level {
+            height: 100%; width: 0; text-align: right; padding-right: 10px;
+            line-height: 25px; color: white; background: linear-gradient(45deg,#8e44ad,#5b2c6f);
+            border-radius:20px; transition: width 1.5s;
+        }
+
+        /* CONTACT FORM */
+        .contact-form input,
+        .contact-form textarea {
+            padding: 12px; border-radius: 8px; border: 1px solid #ccc; font-size: 16px;
+            width: 100%; margin-bottom: 15px;
+        }
+
+        .contact-form button {
+            padding: 12px; background: linear-gradient(45deg,#8e44ad,#5b2c6f);
+            color: white; border: none; border-radius: 8px; font-size: 16px; cursor: pointer;
+        }
+
+        footer {
+            margin-top: 50px; padding: 25px 0; text-align: center; background-color: #faf3eb;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">
+        <img src="https://static.vecteezy.com/system/resources/previews/017/423/185/original/premium-letter-nm-logo-design-with-water-wave-concept-nm-letter-logo-design-with-modern-trendy-free-vector.jpg">
+    </div>
+    <div class="header-title">Welcome to My Portfolio</div>
+</header>
+
+<!-- MENU -->
+<div class="menu">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#internship">Internship</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<!-- HOME -->
+<section id="home">
+    <div class="profile-pic">
+        <img src="nithi image.jpeg" class="profile-image">
+
+        <h2 class="intro-name" style="font-size:26px;font-weight:800;color:#5b2c6f;
+                animation: typingName 3s steps(25) forwards, blink .7s infinite;">
+            Hi!, I'm Nithya M
+        </h2>
+
+        <p class="intro-role" style="font-size:20px;font-weight:700;color:#8e44ad;
+                animation: typingRole 3s steps(30) forwards 3s, blink .7s infinite;">
+            Web Developer & Designer
+        </p>
+    </div>
+
+    <footer style="background:none;">
+        <div class="bottom-typing"
+             style="width:80%;margin:auto;font-size:15px;font-weight:600;
+                    overflow:hidden;border-right:3px solid black;white-space:nowrap;
+                    animation: typingBottom 7s steps(80) forwards, blink .7s infinite;">
+            “Currently learning Java and Web Development, constantly improving my skills with the goal of becoming a future-ready Developer and Designer.”
+        </div>
+    </footer>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="box">
+        <h2 class="title">Who I Am</h2>
+
+        <p class="text">
+            I’m <strong>Nithya M</strong>, an aspiring software developer with a background in
+            <strong>Electronics and Computer Science</strong>. Skilled in <strong>Python, Java, SQL, and Web Development</strong>,
+            I enjoy building efficient solutions and exploring new technologies. I am currently upskilling in 
+            <strong>Java Full Stack Development</strong>, with a strong interest in <strong>AI, Machine Learning, and solving real-world problems</strong>.
+            My long-term goal is to grow as a professional developer, combine creativity with logic, and contribute to impactful tech innovations.
+        </p>
+
+    </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+    <div class="box">
+        <h2 class="title">Education & Learning Journey</h2>
+
+        <div class="text">
+            <p><strong>2020 – School Foundation</strong><br>
+                My journey began during my school years, where I built a strong foundation in science and mathematics.
+                This period helped me develop discipline, curiosity, and analytical thinking.</p>
+
+            <p><strong>2022 – Science Stream (PUC)</strong><br>
+                During my pre-university studies, I explored core science subjects that strengthened my logical reasoning
+                and sparked my interest in problem-solving and technology.</p>
+
+            <p><strong>2025 – Electronics & Computer Science</strong><br>
+                I pursued Electronics and Computer Science, where I gained hands-on exposure to programming concepts
+                and developed a deeper understanding of how software and hardware systems work together.</p>
+
+            <p><strong>2025 – Present | Full Stack Java Development</strong><br>
+                To enhance my practical skills, I am currently learning Java Full Stack Development,
+                focusing on building real-world web applications and understanding complete end-to-end development.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <div class="box">
+        <h2 class="title">My Skills</h2>
+
+        <div class="skill"><div class="skill-name">Python</div>
+            <div class="skill-bar"><div class="skill-level" style="width:90%;">90%</div></div>
+        </div>
+
+        <div class="skill"><div class="skill-name">Java</div>
+            <div class="skill-bar"><div class="skill-level" style="width:85%;">85%</div></div>
+        </div>
+
+        <div class="skill"><div class="skill-name">SQL</div>
+            <div class="skill-bar"><div class="skill-level" style="width:80%;">80%</div></div>
+        </div>
+
+        <div class="skill"><div class="skill-name">Web Development</div>
+            <div class="skill-bar"><div class="skill-level" style="width:75%;">75%</div></div>
+        </div>
+
+        <div class="skill"><div class="skill-name">AI & Machine Learning</div>
+            <div class="skill-bar"><div class="skill-level" style="width:70%;">70%</div></div>
+        </div>
+
+    </div>
+</section>
+
+<!-- INTERNSHIP -->
+<section id="internship">
+    <div class="box">
+        <h2 class="title">Internship Experience</h2>
+
+        <p class="text">
+            My internship experience played a key role in shaping my technical interests. 
+            Starting with <strong>Python fundamentals</strong>, I gradually moved into 
+            <strong>Machine Learning</strong> and <strong>Generative AI concepts</strong>.
+            Working on practical tasks helped me understand how intelligent systems work 
+            and strengthened my interest in developing real-world software solutions.
+        </p>
+
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <div class="box">
+        <h2 class="title">Projects</h2>
+        <p class="text">You can add your projects here later.</p>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <div class="box">
+        <h2 class="title">Get In Touch</h2>
+
+        <p class="text">
+            <strong>Email:</strong> nithyam0705@gmail.com<br>
+            <strong>Phone:</strong> +91 8610069716<br>
+            <strong>LinkedIn:</strong> linkedin.com/in/nithya-m
+        </p>
+
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+    </div>
+</section>
+
+<footer>
+    © 2025 Nithya M | Portfolio
+</footer>
+
+</body>
+</html>
